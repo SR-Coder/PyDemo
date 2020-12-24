@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* remove-start  */
+    /* outline-style: dotted; */
+    /* outline-color: red; */
+    /* remove-end */
+}
+header{
+    width: 100%;
+    min-width: 800px;
+    background: rgb(62, 62, 62);
+    padding: 20px;
+}
+.headerSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+#login{
+    text-align: right;
+    display: block;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+#formLogin{
+    position: relative;
+}
+#regBtn{
+    font-size: .7em;
+    margin-top: -5px;
+    margin-right: -10px;
+}
+
+#register{
+    padding: 10px;
+    margin-top: 50px;
+    display: none;
+    width: 400px;
+    background-color: rgb(181, 181, 181);
+    border:1px solid  black  ;
+    border-radius: 10px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: black;
+}
+
+/* My own bootstrap if you will */
+.block{
+    display: block;
+}
+.inline{
+    display: inline-block;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.right{
+    margin-left: 100%;
+}
+.text-right{
+    text-align: right;
+}
