@@ -20,5 +20,7 @@ urlpatterns = [
     path('', include('gateway.urls')),
     path('games/', include('games.urls')),
     path('python/', include('pythonTips.urls')),
+    path('ai/', include('machinelearn.urls')),
     path('admin/', admin.site.urls),
+    
 ]
