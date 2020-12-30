@@ -93,3 +93,13 @@ for name, model in models:
 pyplot.boxplot(results, labels=names)
 pyplot.title('Algorithm Comparison')
 pyplot.show()
+
+# make predictions on validation set
+model = SVC(gamma='auto')
+model.fit(X_train, Y_train)
+predictions = model.predict(X_validation)
+
+# Evaluate predictions
+print(accuracy_score(Y_validation, predictions))
+print(confusion_matrix(Y_validation, predictions))
+print(classification_report(Y_validation, predictions))
