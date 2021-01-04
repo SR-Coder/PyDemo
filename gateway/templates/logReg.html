@@ -13,13 +13,14 @@
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
             crossorigin="anonymous"
         />
-
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
         <script src="{% static 'js/script.js' %}"></script>
     </head>
 
     <body>
+        
         <header class="p-3">
                 <div class="row headerSpaceBetween">
                     <div id="title" class="col-6">
@@ -37,7 +38,7 @@
                                     <input type="password" name="pWord" id="pWord" placeholder="Password">
                                 </div>
                                 <div class="inline">
-                                    <input  type="submit" name="submit" value="Log In">
+                                    <input id='logbtn'  type="submit" name="submit" value="Log In">
                                 </div>
                         </form>
                         <h6 id=regBtn class="btn btn-link" onclick="hideDiv(this.id)">Register for a new account</h6>
@@ -47,6 +48,12 @@
         </header>
 
         <div class="main">
+            <img class="abs rotate4" src="{% static 'images/line1.png' %}" alt="">
+            <img class="abs rotate3" src="{% static 'images/line2.png' %}" alt="">
+            <img class="abs rotate" src="{% static 'images/line3.png' %}" alt="">
+            <img class="abs rotate1" src="{% static 'images/dot1.png' %}" alt="">
+            <img class="abs rotate2" src="{% static 'images/dot2.png' %}" alt="">
+            <img class="abs rotate3" src="{% static 'images/dot3.png' %}" alt="">
             <div id="register">
                 <h1 class="row reghead">Registration</h1>
                 <form action="/register" method="post">

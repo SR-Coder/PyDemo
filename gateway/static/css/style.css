@@ -6,11 +6,17 @@
     /* outline-color: red; */
     /* remove-end */
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
 header{
     width: 100%;
     min-width: 800px;
     background: rgb(62, 62, 62);
     padding: 20px;
+    box-shadow: 0px 10px 10px black;
 }
 .headerSpaceBetween{
     display: flex;
@@ -18,14 +24,19 @@ header{
 }
 
 #login{
-    text-align: right;
     display: block;
+    text-align: right;
     justify-content: space-around;
     margin-top: 15px;
 }
 #formLogin{
     position: relative;
 }
+
+#logbtn{
+    padding: 0px 5px;
+}
+
 #regBtn{
     font-size: .7em;
     margin-top: -5px;
@@ -33,9 +44,9 @@ header{
 }
 
 #register{
+    display: none;
     padding: 10px;
     margin-top: 50px;
-    display: none;
     width: 400px;
     background-color: rgb(181, 181, 181);
     border:1px solid  black  ;
@@ -47,7 +58,15 @@ header{
 }
 
 body{
-    background: black;
+    font-family: 'Cardo', serif;
+    /* background: black; */
+    background: repeating-linear-gradient(
+        -55deg,
+        #222,
+        #222 2px,
+        #333 2px,
+        #333 4px
+    );
 }
 
 /* My own bootstrap if you will */
@@ -67,4 +86,40 @@ body{
 }
 .text-right{
     text-align: right;
+}
+.abs{
+    position: absolute;
+}
+
+.rotate{
+    animation: rotC 20s infinite linear;
+}
+.rotate1{
+    animation: rotCC 30s infinite linear;
+}
+.rotate2{
+    animation: rotC 40s infinite linear;
+}
+.rotate3{
+    animation: rotCC 50s infinite linear;
+}
+.rotate4{
+    animation: rotC 55s infinite linear;
+}
+
+@keyframes rotC {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+@keyframes rotCC {
+    from{
+        transform: rotate(359deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
 }
