@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 header{
+    max-height: 88px;
     width: 100%;
     min-width: 800px;
     background: rgb(62, 62, 62);
@@ -44,7 +45,7 @@ header{
 }
 
 #register{
-    display: none;
+    /* display: none; */
     padding: 10px;
     margin-top: 50px;
     width: 400px;
@@ -52,6 +53,16 @@ header{
     border:1px solid  black  ;
     border-radius: 10px;
 }
+
+.reghead{
+    padding: 10px 1px;
+    margin: 0px;
+}
+.registerbtn{
+    margin: 0px 0px;
+    padding: 0px 5px;
+}
+
 .main{
     display: flex;
     justify-content: center;
@@ -91,7 +102,8 @@ body{
     position: absolute;
 }
 
-.rotate{
+/* random rotation effects. */
+/* .rotate{
     animation: rotC 20s infinite linear;
 }
 .rotate1{
@@ -105,6 +117,9 @@ body{
 }
 .rotate4{
     animation: rotC 55s infinite linear;
+}
+.rotate5{
+    animation: rotCC 65s infinite linear;
 }
 
 @keyframes rotC {
@@ -122,4 +137,4 @@ body{
     to{
         transform: rotate(0deg);
     }
-}
+} */

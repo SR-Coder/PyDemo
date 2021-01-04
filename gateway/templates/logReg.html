@@ -48,12 +48,7 @@
         </header>
 
         <div class="main">
-            <img class="abs rotate4" src="{% static 'images/line1.png' %}" alt="">
-            <img class="abs rotate3" src="{% static 'images/line2.png' %}" alt="">
-            <img class="abs rotate" src="{% static 'images/line3.png' %}" alt="">
-            <img class="abs rotate1" src="{% static 'images/dot1.png' %}" alt="">
-            <img class="abs rotate2" src="{% static 'images/dot2.png' %}" alt="">
-            <img class="abs rotate3" src="{% static 'images/dot3.png' %}" alt="">
+
             <div id="register">
                 <h1 class="row reghead">Registration</h1>
                 <form action="/register" method="post">
@@ -82,7 +77,7 @@
                         <!-- <label for="chkPword">Confirm PW</label> -->
                         <input class="form-control" type="password" name="chkPword" id="chkPword" placeholder="Confirm Password">
                     </div>
-                    <input class="row reghead" type="submit" value="Register">
+                    <input class="row registerbtn" type="submit" value="Register">
                 </form>
                 <h6 id=logBtn class="btn btn-link" onclick="hideDiv(this.id)">Click here to login</h6>
             </div>
