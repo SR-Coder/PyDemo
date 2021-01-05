@@ -38,6 +38,13 @@ header{
     padding: 0px 5px;
 }
 
+.main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
 #regBtn{
     font-size: .7em;
     margin-top: -5px;
@@ -45,13 +52,17 @@ header{
 }
 
 #register{
-    /* display: none; */
+    display: none;
     padding: 10px;
     margin-top: 50px;
     width: 400px;
     background-color: rgb(181, 181, 181);
     border:1px solid  black  ;
     border-radius: 10px;
+}
+
+.palate{
+
 }
 
 .reghead{
@@ -63,10 +74,6 @@ header{
     padding: 0px 5px;
 }
 
-.main{
-    display: flex;
-    justify-content: center;
-}
 
 body{
     font-family: 'Cardo', serif;

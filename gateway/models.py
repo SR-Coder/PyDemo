@@ -77,10 +77,11 @@ class User(models.Model):
     fName = models.CharField(max_length=25)
     lName = models.CharField(max_length=25)
     email = models.EmailField()
-    password = models.CharField(max_length=30)
+    password = models.CharField(max_length=255)
     age = models.DateField()
     accessLevel = models.IntegerField()
     active = models.BooleanField()
+    confirmKey = models.CharField(max_length=255) # This will be a key sent by email to compare and set the confirmed flag
     confirmed = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
