@@ -19,33 +19,33 @@ class UserManager(models.Manager):
             errors['lName']="Last name must be greater than two characters"
         # Email regex that ensures a valid email is inserted
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-        if not EMAIL_REGEX.match(postData['email']):    # test whether a field matches the pattern            
-            errors['email'] = "Invalid email address!"
+        if not EMAIL_REGEX.match(postData['eMailr']):    # test whether a field matches the pattern            
+            errors['eMailr'] = "Invalid email address!"
         # checks to make sure that the email is unique
-        user = users.objects.filter(email = postData['email'])
+        user = User.objects.filter(email = postData['eMailr'])
         if user:
-            errors['email'] = "There is already an account associated with this address"
+            errors['eMailr'] = "There is already an account associated with this address"
         
 # ****************************************************
 # *** This is the birthday validator age must be   ***
 # *** set in seconds.... which is a pain. ************
 # ****************************************************
-        if postData['bDay'] =="":
-            errors['bDay']="enter a valid birthday"
-        else:
-            now = datetime.now()
-            birthdate = postData['bDay']
-            birthdate = datetime.strptime(birthdate, '%Y-%m-%d')
-            daysDiff = now - birthdate
-            type(daysDiff)
-            delta = daysDiff.total_seconds()
-            delta = int(delta)
-            print('*'*100)
-            print(daysDiff)
-            print(delta)
-            print('*'*100)
-            if delta < 409968000:
-                errors['bDay']="You must be 13 years old to register"
+        # if postData['bDay'] =="":
+        #     errors['bDay']="enter a valid birthday"
+        # else:
+        #     now = datetime.now()
+        #     birthdate = postData['bDay']
+        #     birthdate = datetime.strptime(birthdate, '%Y-%m-%d')
+        #     daysDiff = now - birthdate
+        #     type(daysDiff)
+        #     delta = daysDiff.total_seconds()
+        #     delta = int(delta)
+        #     print('*'*100)
+        #     print(daysDiff)
+        #     print(delta)
+        #     print('*'*100)
+        #     if delta < 409968000:
+        #         errors['bDay']="You must be 13 years old to register"
 # ****************************************************
 
         # checks to see if the password matches the regex

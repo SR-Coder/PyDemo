@@ -1,4 +1,8 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.contrib import messages
+import bcrypt
+from datetime import datetime, timedelta, date
+from .models import User
 from .hfunctions import *
 
 # Create your views here.
@@ -7,6 +11,11 @@ def dispLogReg(request):
 
 # Registeration Submit method:
 def registerSubmit(request):
+    errors = User.objects.basic_validator(request.POST)
+    if len(errors)>0:
+        for key,value in errors.items():
+            messages.error(request,value)
+        return redirect('/')
     firstName = request.POST['fName']
     lastName = request.POST['lName']
     email = request.POST['eMailr']

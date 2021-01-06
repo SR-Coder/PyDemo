@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
 }
+.red-text-small{
+    color: red;
+    font-size: .7em;
+}
 header{
     max-height: 88px;
     width: 100%;
@@ -29,6 +33,7 @@ header{
     text-align: right;
     justify-content: space-around;
     margin-top: 15px;
+    transition: all .5s linear;
 }
 #formLogin{
     position: relative;
@@ -52,17 +57,25 @@ header{
 }
 
 #register{
-    display: none;
+    display: block;
     padding: 10px;
     margin-top: 50px;
     width: 400px;
     background-color: rgb(181, 181, 181);
     border:1px solid  black  ;
     border-radius: 10px;
+    box-shadow: 0px 10px 10px black;
+    transition: all .5s linear;
 }
 
-.palate{
+.visible{
+    visibility: visible;
+    opacity: 1;
+}
 
+.hidden{
+    visibility: hidden;
+    opacity: 0;
 }
 
 .reghead{
