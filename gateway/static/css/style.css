@@ -6,7 +6,17 @@
     /* outline-color: red; */
     /* remove-end */
 }
-
+body{
+    position: relative;
+    font-family: 'Cardo', serif;
+    background: repeating-linear-gradient(
+        -55deg,
+        #222,
+        #222 2px,
+        #333 2px,
+        #333 4px
+    );
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -16,6 +26,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .7em;
 }
 header{
+    position: sticky;
+    top: 0;
     max-height: 88px;
     width: 100%;
     min-width: 800px;
@@ -47,6 +59,7 @@ header{
     position: relative;
     display: flex;
     justify-content: center;
+    min-height: 800px;
     
 }
 
@@ -88,19 +101,9 @@ header{
 }
 
 
-body{
-    font-family: 'Cardo', serif;
-    /* background: black; */
-    background: repeating-linear-gradient(
-        -55deg,
-        #222,
-        #222 2px,
-        #333 2px,
-        #333 4px
-    );
-}
 
-/* My own bootstrap if you will */
+
+
 .block{
     display: block;
 }
@@ -122,39 +125,15 @@ body{
     position: absolute;
 }
 
-/* random rotation effects. */
-/* .rotate{
-    animation: rotC 20s infinite linear;
-}
-.rotate1{
-    animation: rotCC 30s infinite linear;
-}
-.rotate2{
-    animation: rotC 40s infinite linear;
-}
-.rotate3{
-    animation: rotCC 50s infinite linear;
-}
-.rotate4{
-    animation: rotC 55s infinite linear;
-}
-.rotate5{
-    animation: rotCC 65s infinite linear;
-}
+.leftMenu{
+    background: black;
+    min-width: 200px;
+    height: 100%;
+    position: sticky;
+    left: 0;
+    top: 0px;
+    /* left: 1000px; */
+    /* margin-top: 50px; */
 
-@keyframes rotC {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(359deg);
-    }
+    
 }
-@keyframes rotCC {
-    from{
-        transform: rotate(359deg);
-    }
-    to{
-        transform: rotate(0deg);
-    }
-} */
