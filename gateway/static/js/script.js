@@ -60,20 +60,33 @@ function onChangeHandler(data){
         }
     }
 }
+const toBinary = (dec) => {
+    return (dec >>> 0).toString(2)
+}
 
 function updateClock() {
     var now = new Date(), // current date
-        months = ['January', 'February', '...']; // you get the idea
-        time = now.getHours() + ':' + now.getMinutes() + ":" + now.getSeconds() // again, you get the idea
-
+        months = ['January', 'February', 'March','April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // you get the idea
+        if(now.getSeconds()<10){
+            var seconds = '0'+now.getSeconds();
+        } else {
+            var seconds = now.getSeconds();
+        }
+        // convert to binary
+        seconds = toBinary(seconds)
+        hours = toBinary(now.getHours())
+        minutes = toBinary(now.getMinutes())
+        time = hours + ':' + minutes + ":" + seconds // again, you get the idea
+        
         // a cleaner way than string concatenation
         date = [now.getDate(), 
-                months[now.getMonth()],
-                now.getFullYear()].join(' ');
-
+            months[now.getMonth()],
+            now.getFullYear()].join(' ');
+            
+    
     // set the content of the element with the ID time to the formatted string
     document.getElementById('time').innerHTML = [date, time].join(' / ');
-
+    console.log(seconds)
     // call this function again in 1000ms
     setTimeout(updateClock, 1000);
 }
