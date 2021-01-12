@@ -66,7 +66,9 @@ const toBinary = (dec) => {
 
 function updateClock() {
     var now = new Date(), // current date
-        months = ['January', 'February', 'March','April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // you get the idea
+        months = ['January', 'February', 'March','April', 'May', 
+                'June', 'July', 'August', 'September', 'October', 
+                'November', 'December'];
         if(now.getSeconds()<10){
             var seconds = '0'+now.getSeconds();
         } else {
@@ -76,19 +78,18 @@ function updateClock() {
         seconds = toBinary(seconds)
         hours = toBinary(now.getHours())
         minutes = toBinary(now.getMinutes())
-        time = hours + ':' + minutes + ":" + seconds // again, you get the idea
+        time = hours + ':' + minutes + ":" + seconds
         
-        // a cleaner way than string concatenation
         date = [now.getDate(), 
             months[now.getMonth()],
             now.getFullYear()].join(' ');
-            
-    
-    // set the content of the element with the ID time to the formatted string
-    document.getElementById('time').innerHTML = [date, time].join(' / ');
-    console.log(seconds)
-    // call this function again in 1000ms
-    setTimeout(updateClock, 1000);
+        
+        var timeFromEpoch = Date.now()
+
+    // document.getElementById('time').innerHTML = [date, time].join(' / ');
+    document.getElementById('time').innerHTML =  ['EOT:' , toBinary(timeFromEpoch)].join(' ');
+    // console.log(seconds)
+    setTimeout(updateClock, 1);
 }
 
 document.addEventListener('DOMContentLoaded', function(event){
