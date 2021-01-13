@@ -54,7 +54,8 @@ header{
 
 .main{
     display: flex;
-    justify-content: center;
+    text-align: center;
+    /* justify-content: center; */
     min-height: 800px;
     
 }
@@ -67,10 +68,11 @@ header{
 
 #register{
     position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     display: block;
     padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 50px;
     width: 400px;
     height: 450px;
@@ -127,7 +129,7 @@ header{
 
 #openTab{
     margin-top: 100px;
-    margin-right: auto;
+    /* margin-right: auto; */
     background: rgba(0,0,0,.25);
     max-height: 75px;
     display: flex;
@@ -188,6 +190,13 @@ header{
     margin-top: 8px;
     font-family: 'Press Start 2P';
     font-size: 26px;
+    color: #818181;
+}
+.mainContent{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
     color: #818181;
 }
 
